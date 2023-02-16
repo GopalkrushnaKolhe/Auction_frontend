@@ -3,7 +3,7 @@
 check if you're in correact folder, then
 git add .
 git commit -m "भावा तुझा commit चा message  इकडे ताक"
-git push origin  
+git push origin main
 ```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
