@@ -1,6 +1,6 @@
 # To clone -
 ```
-git pull https://github.com/KedarKK1/auction_frontend_WTL/
+git clone https://github.com/KedarKK1/auction_frontend_WTL/
 ```
 
 # Git commands -
