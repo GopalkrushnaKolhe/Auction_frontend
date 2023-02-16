@@ -1,3 +1,8 @@
+# To clone -
+```
+git pull https://github.com/KedarKK1/auction_frontend_WTL/
+```
+
 # Git commands -
 ```
 check if you're in correact folder, then
