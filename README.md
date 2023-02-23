@@ -7,7 +7,7 @@ git clone https://github.com/KedarKK1/auction_frontend_WTL/
 ```
 check if you're in correact folder, then
 git add .
-git commit -m "भावा तुझा commit चा message  इकडे ताक"
+git commit -m "भावा तुझा commit चा message इकडे लिही"
 git push origin main
 ```
 
@@ -50,10 +50,17 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+# Changes Log -
+
 Date : 23/02/2023
-Sarthak - 1. index.js madhe navbar set kela 
- 2. tailwind css techa J query rahila aahe.  
+
+Sarthak - 
+    1. index.js madhe navbar set kela 
+ 2. tailwind css techa J query rahila aahe => In Jquery Dont Use Jquery 
  3. tw-element cha document error yetoy. => solved, used script in _document.js
  4. @ kaam karat nahiye ../styles/global => by Kedar - Use ../styles/global.css instead of @styles/global.css
-Kedar - 1. used script tag in _document.js
+
+Kedar - 
+    1. used script tag in _document.js
 2. Use ../styles/global.css instead of @styles/global.css
+3. In next js, don't use Jquery element 

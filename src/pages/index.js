@@ -9,8 +9,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <Script>
-        </Script>
       </Head>
        
       <div className="h-screen bg-blue-500">
