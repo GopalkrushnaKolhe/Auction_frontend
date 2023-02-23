@@ -1,5 +1,6 @@
-import '@/styles/globals.css'
-import { useEffect } from 'react';
+// import '@/styles/globals.css'
+import '../styles/globals.css';
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
   // return <Component {...pageProps} /> // changed this to enable tailwind css and tailwind element
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }) {
     };
     use();
   }, []);
+  
 
   return <Component {...pageProps} />;
 }
