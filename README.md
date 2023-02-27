@@ -5,10 +5,12 @@ git clone https://github.com/KedarKK1/auction_frontend_WTL/
 
 # Git commands -
 ```
-check if you're in correact folder, then
-git add .
-git commit -m "भावा तुझा commit चा message इकडे लिही"
-git push origin main
+1. check if you're in correact folder, then
+2. git pull origin main
+3. then run the frontend to check if there are any error because of pulling, if there are no errors then go to next steps else in case of errors resolve merger conflicts and re-run the project to see if it is running smoothly or not, then 
+4. git add .
+5. git commit -m "भावा तुझा commit चा message इकडे लिही, this message will be visible on github, so please write all things in short and meaningfully that you have changed/added in this code"
+6. git push origin main
 ```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
