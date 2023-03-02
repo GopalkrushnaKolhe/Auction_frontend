@@ -5,10 +5,12 @@ git clone https://github.com/KedarKK1/auction_frontend_WTL/
 
 # Git commands -
 ```
-check if you're in correact folder, then
-git add .
-git commit -m "भावा तुझा commit चा message  इकडे ताक"
-git push origin main
+1. check if you're in correact folder, then
+2. git pull origin main
+3. then run the frontend to check if there are any error because of pulling, if there are no errors then go to next steps else in case of errors resolve merger conflicts and re-run the project to see if it is running smoothly or not, then 
+4. git add .
+5. git commit -m "भावा तुझा commit चा message इकडे लिही, this message will be visible on github, so please write all things in short and meaningfully that you have changed/added in this code"
+6. git push origin main
 ```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -50,5 +52,25 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+# Changes Log -
+
 Date : 23/02/2023
-Sarthak - index.js madhe navbar set kela tailwind css techa J query rahila aahe. tw-elemnt cha document error yetoy. @ kaam karat nahiye ../styles/global
+
+Sarthak - 
+    1. index.js madhe navbar set kela 
+    2. tailwind css techa J query rahila aahe => In Jquery Dont Use Jquery 
+    3. tw-element cha document error yetoy. => solved, used script in _document.js
+    4. @ kaam karat nahiye ../styles/global => by Kedar - Use ../styles/global.css instead of @styles/global.css
+
+Kedar - 
+    1. used script tag in _document.js
+    2. Use ../styles/global.css instead of @styles/global.css
+    3. In next js, don't use Jquery element 
+
+
+Date : 02/03/2023
+
+Sarthak -
+    1. Link kele sagayi pages of navbar ani login-signup
+    2. Login ani Sign-up page kela with carousel takun
+    3. Jquery remaining aahe login ani sign-up sathi

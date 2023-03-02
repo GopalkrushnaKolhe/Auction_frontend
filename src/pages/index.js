@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css' // not working, dont know why! Used below line as solution
+// import styles from '@/styles/Home.module.css' // not working, dont know why! Used below line as solution
 import styles from '../styles/Home.module.css'
 import Script from 'next/script';
 import Link from 'next/link';
@@ -12,6 +13,7 @@ export default function Home() {
       <Head>
       </Head>
        
+      <div className="h-screen bg-blue-500">
       <div className="h-screen bg-blue-500">
         <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
           <a className="text-3xl font-bold leading-none" href="#">
@@ -102,6 +104,7 @@ export default function Home() {
             </div>
           </nav>
         </div>
+      </div>
       </div>
       </div>
   )
