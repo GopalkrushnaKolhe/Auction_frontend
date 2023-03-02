@@ -1,4 +1,4 @@
-// import '@/styles/globals.css'
+// import '@/styles/globals.css' // not working, dont know why! Used below line as solution
 import '../styles/globals.css';
 import { useEffect } from "react";
 

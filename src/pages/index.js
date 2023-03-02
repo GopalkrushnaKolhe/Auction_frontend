@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-// import styles from '@/styles/Home.module.css'
+// import styles from '@/styles/Home.module.css' // not working, dont know why! Used below line as solution
 import styles from '../styles/Home.module.css'
-// import Script from 'next/script';
-// import 'tw-elements';
+import Script from 'next/script';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,9 +12,7 @@ export default function Home() {
       <Head>
       </Head>
        
-
-
-      {/* <body className="bg-blue-500"> */}
+      <div className="h-screen bg-blue-500">
         <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
           <a className="text-3xl font-bold leading-none" href="#">
             <svg className="h-10" alt="logo" viewBox="0 0 10240 10240">
@@ -30,34 +28,34 @@ export default function Home() {
             </button>
           </div>
           <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-            <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
+            <li><Link id="p1" className="text-sm text-blue-600 hover:text-gray-500 font-bold" href='/'>Home</Link></li>
             <li className="text-gray-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </li>
-            <li><a className="text-sm text-blue-600 font-bold" href="#">About Us</a></li>
+            <li><Link className="text-sm text-gray-400 hover:text-gray-500" href='about'>About Us</Link></li>
             <li className="text-gray-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </li>
-            <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
+            <li><Link className="text-sm text-gray-400 hover:text-gray-500" href='Service'>Services</Link></li>
             <li className="text-gray-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </li>
-            <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
+            <li><Link className="text-sm text-gray-400 hover:text-gray-500" href='Price'>Pricing</Link></li>
             <li className="text-gray-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </li>
-            <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+            <li><Link className="text-sm text-gray-400 hover:text-gray-500" href='Contact'>Contact</Link></li>
           </ul>
-          <a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Login</a>
-          <a className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Register</a>
+          <Link className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href='login'>Login</Link>
+          <Link className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href='sign'>Register</Link>
         </nav>
         <div className="navbar-menu relative z-50 hidden">
           <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -77,19 +75,19 @@ export default function Home() {
             <div>
               <ul>
                 <li className="mb-1">
-                  <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+                  <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/">Home</Link>
                 </li>
                 <li className="mb-1">
-                  <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
+                  <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="about">About Us</Link>
                 </li>
                 <li className="mb-1">
-                  <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Services</a>
+                  <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="Service">Services</Link>
                 </li>
                 <li className="mb-1">
-                  <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
+                  <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="Price">Pricing</Link>
                 </li>
                 <li className="mb-1">
-                  <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
+                  <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="Contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -104,7 +102,7 @@ export default function Home() {
             </div>
           </nav>
         </div>
-      {/* </body> */}
+      </div>
       </div>
   )
   

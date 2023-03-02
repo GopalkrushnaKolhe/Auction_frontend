@@ -52,4 +52,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Date : 23/02/2023
 Sarthak - index.js madhe navbar set kela tailwind css techa J query rahila aahe. tw-elemnt cha document error yetoy. @ kaam karat nahiye ../styles/global
-
