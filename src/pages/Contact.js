@@ -1,3 +1,4 @@
+import React from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
@@ -6,6 +7,7 @@ import styles from '../styles/Home.module.css'
 import Script from 'next/script';
 import Link from 'next/link';
 import Navbar from './Components/Navbar';
+import Footer from "./Components/Footer";
 
 export default function Contact() {
   return (
@@ -64,6 +66,7 @@ export default function Contact() {
     </div>
   </div>
 </section>
+<Footer/>
     </div>
   )
 }
