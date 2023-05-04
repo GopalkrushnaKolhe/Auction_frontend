@@ -423,6 +423,7 @@ export default function auction_calender() {
                 <p className="mt-1">$16.00</p>
               </div>
             </div>
+        
             <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
               <a className="block relative h-48 rounded overflow-hidden">
                 <img
