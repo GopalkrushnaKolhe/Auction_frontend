@@ -1,7 +1,18 @@
 import React from "react";
 import Link from "next/link";
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
 function Navbar() {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div>
           <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
@@ -121,6 +132,27 @@ function Navbar() {
             >
               Register
             </Link>
+
+            <div className="flex">
+        {currentTheme === 'dark' ? (
+          <button
+            className="bg-black-700 hover:bg-black w-12 h-12 rounded-md border-purple-400 border-2 p-2 mx-2"
+            onClick={() => setTheme('light')}
+          >
+            {/* Light mode button content */}
+            <img src="/sun.svg" alt="Light Mode" className="w-6 h-6" />
+          </button>
+        ) : (
+          <button
+            className="bg-gray-100 w-12 h-12 rounded-md border-purple-400 border-2 p-2 mx-2 hover:bg-gray-300"
+            onClick={() => setTheme('dark')}
+          >
+            {/* Dark mode button content */}
+            <img src="/moon.svg" alt="Dark Mode" className="w-6 h-6" />
+          </button>
+        )}
+      </div>
+  
           </nav>
           {/* <div className="navbar-menu relative z-50 hidden">
           <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>

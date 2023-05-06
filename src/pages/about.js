@@ -10,8 +10,9 @@ import Footer from "./Components/Footer";
 
 export default function about() {
 
-  return (
+  return (<>
     <Navbar/>
-    
+    <Footer/>
+    </>
   );
 }
