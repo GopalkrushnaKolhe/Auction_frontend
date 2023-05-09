@@ -8,6 +8,7 @@ import { ThemeProvider } from 'next-themes';
 export default function App({ Component, pageProps }) {
   // return <Component {...pageProps} /> // changed this to enable tailwind css and tailwind element
 
+
   useEffect(() => {
 
     // <Navbar/>
