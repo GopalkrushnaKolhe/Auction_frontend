@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
@@ -10,6 +10,43 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 export default function auction_calender() {
+  const fetchData = async () => {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `${localStorage.getItem("token")}`
+      },
+      // body: JSON.stringify(loginData),
+    };
+  
+    fetch("http://127.0.0.1:8000/api/auction/", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle the login response
+        // if (data.success) {
+          // Login successful
+          console.log("Login successful!", data);
+            // console.log("Access token:", data.access);
+          // if(data.access){
+          //   let key = "JWT " + data.access; 
+          //   localStorage.setItem("token", key);
+          //   location.href = "/auction_calender"
+          // }else{
+          //   setLoginError("Invalid credentials. Please try again.");
+          // }
+      })
+      .catch((error) => {
+        // Handle any errors
+        setLoginError("An error occurred. Please try again later.");
+        console.error(error);
+      });
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
   return (
     <section className="text-gray-600 body-font">
       <Navbar />

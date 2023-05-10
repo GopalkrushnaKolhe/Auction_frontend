@@ -1,44 +1,57 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import Navbar from "./Components/Navbar";
+import Link from "next/link"
+import React, { useState } from 'react'
+import { useRouter } from 'next/router';
 
 const login = () => {
-  const [loginData, setloginData] = useState({
+
+  const [loginData, setLoginData] = useState({
     username: "",
     password: "",
   });
 
-  const onChangeForm = (e) => {
-    let t = e.target.name;
-    let v = e.target.value;
-    ({
-      ...loginData,
-      [t]: v,
-    });
-  };
-
-  const logJSONData = (e) => {
+  const [loginError, setLoginError] = useState("");
+  const handleLogin = (e) => {
     e.preventDefault();
-    console.log("JSON.stringify(loginData) ", JSON.stringify(loginData));
-    fetch("http://127.0.0.1:8000/auth2/login", {
+    const requestOptions = {
       method: "POST",
       headers: {
-        // "Content-Type": "application/json",
-        "Content-Type": "application/x-www-form-urlencoded",
-        // Authorization: `JWT ${localStorage.getitem("token")}`,
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(loginData), // body data type must match "Content-Type" header
-    })
+      body: JSON.stringify(loginData),
+    };
+  
+    fetch("http://127.0.0.1:8000/auth2/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        // Handle the response data
-        console.log(data);
+        // Handle the login response
+        // if (data.success) {
+          // Login successful
+          if(data.access){
+            console.log("Login successful!", data);
+            console.log("Access token:", data.access);
+            let key = "JWT " + data.access; 
+            localStorage.setItem("token", key);
+            location.href = "/auction_calender"
+          }else{
+            setLoginError("Invalid credentials. Please try again.");
+          }
       })
       .catch((error) => {
         // Handle any errors
-        console.error("error", error);
+        setLoginError("An error occurred. Please try again later.");
+        console.error(error);
       });
   };
+  
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setLoginData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    console.log("loginData ", loginData);
+  };
+  
 
   return (
     <section className="flex flex-col md:flex-row h-screen items-center">
@@ -123,13 +136,13 @@ const login = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="h-6 w-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M15.75 19.5L8.25 12l7.5-7.5"
                 />
               </svg>
@@ -149,13 +162,13 @@ const login = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="h-6 w-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M8.25 4.5l7.5 7.5-7.5 7.5"
                 />
               </svg>
@@ -178,9 +191,9 @@ const login = () => {
             Log in to your account
           </h1>
 
-          <form className="mt-6" action="#" method="POST">
-            <div>
-              <label className="block text-gray-700">Username</label>
+          <form className="mt-6" onSubmit={handleLogin}>
+            {/* <div>
+              <label className="block text-gray-700">Email Address</label>
               <input
                 onChange={onChangeForm}
                 type="text"
@@ -190,19 +203,36 @@ const login = () => {
                 placeholder="Enter Username"
                 className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                 autoFocus
+                
                 required
               />
+            </div> */}
+            <div>
+            <label className="block text-gray-700">Username</label>
+            <input
+              type="text"
+              name="username"
+              value={loginData.username}
+              onChange={handleInputChange}
+              placeholder="Username"
+              className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+              autoFocus
+              
+              required
+            />
             </div>
+
+
 
             <div className="mt-4">
               <label className="block text-gray-700">Password</label>
               <input
-                onChange={onChangeForm}
                 type="password"
                 name="password"
                 id=""
                 value={loginData.password}
                 placeholder="Enter Password"
+                onChange={handleInputChange}
                 minLength="6"
                 className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                   focus:bg-white focus:outline-none"
@@ -218,16 +248,17 @@ const login = () => {
                 Forgot Password?
               </a>
             </div>
+            {loginError && <p className="text-red-500 mt-2">{loginError}</p>}
 
-            <Link href="/" passHref>
-              <button
-                type="submit"
-                className="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
+            {/* <Link href='/' passHref>  */}
+            <button
+              type="submit"
+              className="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
               px-4 py-3 mt-6"
               >
-                Log In
-              </button>
-            </Link>
+              Log In
+            </button>
+            {/* </Link> */}
           </form>
 
           <hr className="my-6 border-gray-300 w-full" />
