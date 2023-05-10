@@ -5,13 +5,13 @@ import { Inter } from "@next/font/google";
 // import styles from '@/styles/Home.module.css' // not working, dont know why! Used below line as solution
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
-import Link from "next/link";
+import Link from 'next/link';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 export default function auction_calender() {
   const [auctionsList, setAuctionsList] = useState([]);
-  const [loginError, setLoginError] = useState("")
+  const [loginError, setLoginError] = useState("");
 
   const fetchData = async () => {
     const requestOptions = {
@@ -20,7 +20,6 @@ export default function auction_calender() {
         "Content-Type": "application/json",
         "Authorization": `${localStorage.getItem("token")}`,
       },
-      // body: JSON.stringify(loginData),
     };
   
     fetch("http://localhost:8000/api/auction/", requestOptions)
@@ -30,7 +29,6 @@ export default function auction_calender() {
           setAuctionsList(data);
       })
       .catch((error) => {
-        // Handle any errors
         setLoginError("An error occurred. Please try again later.");
         console.error("error ", error);
       });
@@ -473,9 +471,9 @@ export default function auction_calender() {
                         {auction.name}
                       </h2>
                       <p className="mt-1">₹. {auction.base_price}</p>
-                      <a href="auction_p">
-                      <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600  rounded hover-icon">View & Bid</button>
-                      </a>
+                      <Link href={`/auction_p/${auction.id}`}>
+                        <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600  rounded hover-icon">View & Bid</button>
+                      </Link>
                     </div>
                   </div>
                 )
