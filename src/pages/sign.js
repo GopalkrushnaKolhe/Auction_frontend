@@ -13,15 +13,22 @@ const sign = () => {
     "is_staff": false,
   })
 
+  // const onChangeForm = (e) => {
+  //   let t = e.target.name;
+  //   let v = e.target.value;
+  //     ({
+  //     ...formData,
+  //     [t]: v,
+  //   })
+  // }
   const onChangeForm = (e) => {
-    let t = e.target.name;
-    let v = e.target.value;
-      ({
-      ...formData,
-      [t]: v,
-    })
-  }
-
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+  
   const logJSONData = (e) => {
     e.preventDefault();
     console.log(
