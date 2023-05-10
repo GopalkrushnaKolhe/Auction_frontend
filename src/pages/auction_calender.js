@@ -5,31 +5,32 @@ import { Inter } from "@next/font/google";
 // import styles from '@/styles/Home.module.css' // not working, dont know why! Used below line as solution
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
-import Link from "next/link";
+import Link from 'next/link';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 export default function auction_calender() {
   const [auctionsList, setAuctionsList] = useState([]);
   const [loginError, setLoginError] = useState("");
+
   const fetchData = async () => {
     const requestOptions = {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("token")}`
+        "Authorization": `${localStorage.getItem("token")}`,
       },
     };
   
-    fetch("http://127.0.0.1:8000/api/auction/", requestOptions)
+    fetch("http://localhost:8000/api/auction/", requestOptions)
       .then((response) => response.json())
       .then((data) => {
-          console.log("Login successful!", data);
+          console.log("api/auction", data);
           setAuctionsList(data);
       })
       .catch((error) => {
         setLoginError("An error occurred. Please try again later.");
-        console.error(error);
+        console.error("error ", error);
       });
   }
 
@@ -126,7 +127,7 @@ export default function auction_calender() {
                     <label htmlFor="filter-mobile-color-1" className="ml-3 min-w-0 flex-1 text-gray-500">Beige</label>
                   </div>
                   <div className="flex items-center">
-                    <input id="filter-mobile-color-2" name="color[]" value="blue" type="checkbox" checked className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
+                    <input id="filter-mobile-color-2" name="color[]" value="blue" type="checkbox"  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
                     <label htmlFor="filter-mobile-color-2" className="ml-3 min-w-0 flex-1 text-gray-500">Blue</label>
                   </div>
                   <div className="flex items-center">
@@ -173,7 +174,7 @@ export default function auction_calender() {
                     <label htmlFor="filter-mobile-category-1" className="ml-3 min-w-0 flex-1 text-gray-500">Sale</label>
                   </div>
                   <div className="flex items-center">
-                    <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox" checked className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
+                    <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox"  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
                     <label htmlFor="filter-mobile-category-2" className="ml-3 min-w-0 flex-1 text-gray-500">Travel</label>
                   </div>
                   <div className="flex items-center">
@@ -228,7 +229,7 @@ export default function auction_calender() {
                     <label htmlFor="filter-mobile-size-4" className="ml-3 min-w-0 flex-1 text-gray-500">20L</label>
                   </div>
                   <div className="flex items-center">
-                    <input id="filter-mobile-size-5" name="size[]" value="40l" type="checkbox" checked className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
+                    <input id="filter-mobile-size-5" name="size[]" value="40l" type="checkbox"  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
                     <label htmlFor="filter-mobile-size-5" className="ml-3 min-w-0 flex-1 text-gray-500">40L</label>
                   </div>
                 </div>
@@ -311,15 +312,15 @@ export default function auction_calender() {
               <h3 className="-my-3 flow-root">
             
                 <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
-                  <span className="font-medium text-gray-900">Color</span>
+                  <span className="font-medium text-gray-900">Category</span>
                   <span className="ml-6 flex items-center">
-                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    {/* <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
                    
                     <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fillRule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clipRule="evenodd" />
-                    </svg>
+                    </svg> */}
                   </span>
                 </button>
               </h3>
@@ -328,27 +329,27 @@ export default function auction_calender() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <input id="filter-color-0" name="color[]" value="white" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-color-0" className="ml-3 text-sm text-gray-600">White</label>
+                    <label htmlFor="filter-color-0" className="ml-3 text-sm text-gray-600">Mobile</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-color-1" name="color[]" value="beige" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Beige</label>
+                    <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Laptop</label>
                   </div>
                   <div className="flex items-center">
-                    <input id="filter-color-2" name="color[]" value="blue" type="checkbox" checked className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-color-2" className="ml-3 text-sm text-gray-600">Blue</label>
+                    <input id="filter-color-2" name="color[]" value="blue" type="checkbox"  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
+                    <label htmlFor="filter-color-2" className="ml-3 text-sm text-gray-600">SmartWatch</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-color-3" name="color[]" value="brown" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-color-3" className="ml-3 text-sm text-gray-600">Brown</label>
+                    <label htmlFor="filter-color-3" className="ml-3 text-sm text-gray-600">Home Appliances</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-color-4" name="color[]" value="green" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-color-4" className="ml-3 text-sm text-gray-600">Green</label>
+                    <label htmlFor="filter-color-4" className="ml-3 text-sm text-gray-600">TV</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-color-5" name="color[]" value="purple" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-color-5" className="ml-3 text-sm text-gray-600">Purple</label>
+                    <label htmlFor="filter-color-5" className="ml-3 text-sm text-gray-600">Other</label>
                   </div>
                 </div>
               </div>
@@ -357,16 +358,16 @@ export default function auction_calender() {
               <h3 className="-my-3 flow-root">
               
                 <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="false">
-                  <span className="font-medium text-gray-900">Category</span>
+                  <span className="font-medium text-gray-900">Prize</span>
                   <span className="ml-6 flex items-center">
                 
-                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    {/* <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
                    
                     <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fillRule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clipRule="evenodd" />
-                    </svg>
+                    </svg> */}
                   </span>
                 </button>
               </h3>
@@ -375,23 +376,23 @@ export default function auction_calender() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <input id="filter-category-0" name="category[]" value="new-arrivals" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-category-0" className="ml-3 text-sm text-gray-600">New Arrivals</label>
+                    <label htmlFor="filter-category-0" className="ml-3 text-sm text-gray-600">0-1000</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-category-1" name="category[]" value="sale" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-category-1" className="ml-3 text-sm text-gray-600">Sale</label>
+                    <label htmlFor="filter-category-1" className="ml-3 text-sm text-gray-600">1000-3000</label>
                   </div>
                   <div className="flex items-center">
-                    <input id="filter-category-2" name="category[]" value="travel" type="checkbox" checked className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-category-2" className="ml-3 text-sm text-gray-600">Travel</label>
+                    <input id="filter-category-2" name="category[]" value="travel" type="checkbox"  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
+                    <label htmlFor="filter-category-2" className="ml-3 text-sm text-gray-600">3000-10000</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-category-3" name="category[]" value="organization" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-category-3" className="ml-3 text-sm text-gray-600">Organization</label>
+                    <label htmlFor="filter-category-3" className="ml-3 text-sm text-gray-600">10000-50000</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-category-4" name="category[]" value="accessories" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-category-4" className="ml-3 text-sm text-gray-600">Accessories</label>
+                    <label htmlFor="filter-category-4" className="ml-3 text-sm text-gray-600">50000+</label>
                   </div>
                 </div>
               </div>
@@ -400,16 +401,16 @@ export default function auction_calender() {
               <h3 className="-my-3 flow-root">
               
                 <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-2" aria-expanded="false">
-                  <span className="font-medium text-gray-900">Size</span>
+                  <span className="font-medium text-gray-900">Country</span>
                   <span className="ml-6 flex items-center">
                     
-                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    {/* <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
                     
                     <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path fillRule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clipRule="evenodd" />
-                    </svg>
+                    </svg> */}
                   </span>
                 </button>
               </h3>
@@ -418,27 +419,27 @@ export default function auction_calender() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <input id="filter-size-0" name="size[]" value="2l" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-size-0" className="ml-3 text-sm text-gray-600">2L</label>
+                    <label htmlFor="filter-size-0" className="ml-3 text-sm text-gray-600">India</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-size-1" name="size[]" value="6l" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-size-1" className="ml-3 text-sm text-gray-600">6L</label>
+                    <label htmlFor="filter-size-1" className="ml-3 text-sm text-gray-600">China</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-size-2" name="size[]" value="12l" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-size-2" className="ml-3 text-sm text-gray-600">12L</label>
+                    <label htmlFor="filter-size-2" className="ml-3 text-sm text-gray-600">US</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-size-3" name="size[]" value="18l" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-size-3" className="ml-3 text-sm text-gray-600">18L</label>
+                    <label htmlFor="filter-size-3" className="ml-3 text-sm text-gray-600">Australia</label>
                   </div>
                   <div className="flex items-center">
                     <input id="filter-size-4" name="size[]" value="20l" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-size-4" className="ml-3 text-sm text-gray-600">20L</label>
+                    <label htmlFor="filter-size-4" className="ml-3 text-sm text-gray-600">Russia</label>
                   </div>
                   <div className="flex items-center">
-                    <input id="filter-size-5" name="size[]" value="40l" type="checkbox" checked className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
-                    <label htmlFor="filter-size-5" className="ml-3 text-sm text-gray-600">40L</label>
+                    <input id="filter-size-5" name="size[]" value="40l" type="checkbox"  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-500"/>
+                    <label htmlFor="filter-size-5" className="ml-3 text-sm text-gray-600">Other</label>
                   </div>
                 </div>
               </div>
@@ -451,15 +452,15 @@ export default function auction_calender() {
           <div className="flex flex-wrap -m-4">
 
             {
-              auctionsList &&
-              auctionsList.map((auction, inx) => {
+              auctionsList && 
+              auctionsList.map((auction, ind) => {
                 return (
-                  <div key={inx} className="lg:w-1/3 md:w-1/2 p-4 w-full border-black-500">
-                    <a className="block relative h-48 rounded overflow-hidden ">
+                  <div key = {ind} className="lg:w-1/3 md:w-1/2 p-4 w-full">
+                    <a className="block relative h-48 rounded overflow-hidden">
                       <img
                         alt="ecommerce"
                         className="object-cover object-center w-full h-full block"
-                        src="https://dummyimage.com/421x261"
+                        src="https://dummyimage.com/420x260"
                       />
                     </a>
                     <div className="mt-4">
@@ -469,13 +470,187 @@ export default function auction_calender() {
                       <h2 className="text-gray-900 title-font text-lg font-medium">
                         {auction.name}
                       </h2>
-                      <p className="mt-1">{auction.base_price} ₹</p>
-                      <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View & Bid</button>
+                      <p className="mt-1">₹. {auction.base_price}</p>
+                      <Link href={`/auction_p/${auction.id}`}>
+                        <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600  rounded hover-icon">View & Bid</button>
+                      </Link>
                     </div>
                   </div>
                 )
               })
             }
+            {/* <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/420x260"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  The Catalyzer
+                </h2>
+                <p className="mt-1">$16.00</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+        
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/421x261"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  Shooting Stars
+                </h2>
+                <p className="mt-1">$21.15</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/422x262"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  Neptune
+                </h2>
+                <p className="mt-1">$12.00</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/423x263"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  The 400 Blows
+                </h2>
+                <p className="mt-1">$18.40</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/424x264"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  The Catalyzer
+                </h2>
+                <p className="mt-1">$16.00</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/425x265"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  Shooting Stars
+                </h2>
+                <p className="mt-1">$21.15</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/427x267"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  Neptune
+                </h2>
+                <p className="mt-1">$12.00</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/428x268"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  The 400 Blows
+                </h2>
+                <p className="mt-1">$18.40</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div>
+            <div className="lg:w-1/3 md:w-1/2 p-4 w-full">
+              <a className="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  className="object-cover object-center w-full h-full block"
+                  src="https://dummyimage.com/428x268"
+                />
+              </a>
+              <div className="mt-4">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY
+                </h3>
+                <h2 className="text-gray-900 title-font text-lg font-medium">
+                  The 400 Blows
+                </h2>
+                <p className="mt-1">$18.40</p>
+                <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View&Bid</button>
+              </div>
+            </div> */}
 
           </div>
             </div>
