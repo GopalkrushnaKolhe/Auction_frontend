@@ -36,11 +36,11 @@ export default function Contact() {
       <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
         <div className="lg:w-1/2 px-6">
           <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-          <p className="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+          <p className="mt-1">Survey No. 27, Near, Trimurti Chowk, Bharati Vidyapeeth Campus, Dhankawadi, Pune, Maharashtra 411043r</p>
         </div>
         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
           <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-          <a className="text-indigo-500 leading-relaxed">example@email.com</a>
+          <a className="text-indigo-500 leading-relaxed">BiDefi@email.com</a>
           <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
           <p className="leading-relaxed">123-456-7890</p>
         </div>
@@ -48,7 +48,7 @@ export default function Contact() {
     </div>
     <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
       <h2 className="text-gray-900 mb-1 font-medium title-font text-center text-xl">Feedback</h2>
-      <p className="leading-relaxed mb-5 text-gray-600 text-center">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+      <p className="leading-relaxed mb-5 text-gray-600 text-center">Please fill the form to provide your valuable feedback</p>
       <div className="relative mb-4">
         <label for="name" className="leading-7 text-sm text-gray-600">Name</label>
         <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>

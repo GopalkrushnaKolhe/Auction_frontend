@@ -15,20 +15,42 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
+            <a href="/auction_calender"className="text-gray-600 hover:text-gray-800">Mobile</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a href="/auction_calender"className="text-gray-600 hover:text-gray-800">T.V</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a href="/auction_calender"className="text-gray-600 hover:text-gray-800">Laptop</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a href="/auction_calender"className="text-gray-600 hover:text-gray-800">Other</a>
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">User</h2>
+        <nav className="list-none mb-10">
+          <li>
+            <a href="/sign" className="text-gray-600 hover:text-gray-800">Sign up</a>
+          </li>
+          <li>
+            <a href="/login"className="text-gray-600 hover:text-gray-800">Login</a>
+          </li>
+        </nav>
+      </div>
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact</h2>
+        <nav className="list-none mb-10">
+          <li>
+            <a href="/about"className="text-gray-600 hover:text-gray-800">About Us</a>
+          </li>
+          <li>
+            <a href="/Contact"className="text-gray-600 hover:text-gray-800">Contact Us</a>
+          </li>
+        </nav>
+      </div>
+      {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav className="list-none mb-10">
           <li>
@@ -44,46 +66,12 @@ const Footer = () => {
             <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
           </li>
         </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav className="list-none mb-10">
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav className="list-none mb-10">
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
+      </div> */}
     </div>
   </div>
   <div className="bg-gray-100">
     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
+      <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 BiDefi —
         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
       </p>
       <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">

@@ -52,7 +52,7 @@ export default function Home() {
   className="relative"
   data-te-carousel-init
   data-te-carousel-slide
-  style={{ maxWidth: '600px', margin: '0 auto' }}
+  style={{ width: '100%', margin: '10px auto',display: 'flex', justifyContent: 'center'  }}
 >
  
   <div
@@ -87,82 +87,21 @@ export default function Home() {
       data-te-carousel-item
       data-te-carousel-active>
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
+        src="https://ozbid.com.au/wp-content/uploads/2023/03/winning.png"
         className="block w-full h-auto"
+        width="100%" height="auto"
         alt="Motorbike Smoke" />
-      <div
-        className="absolute inset-x-[15%] bottom-2 hidden py-5 text-center text-black md:block">
-        <h5 className="text-lg">First slide label</h5>
-        <p className="text-sm">
-          Some representative placeholder content for the first slide.
-        </p>
-      </div>
     </div>
-          {/* <div
-  id="carouselDarkVariant"
-  className="relative"
-  data-te-carousel-init
-  data-te-carousel-slide>
- 
-  <div
-    className="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-    data-te-carousel-indicators>
-    <button
-      data-te-target="#carouselDarkVariant"
-      data-te-slide-to="0"
-      data-te-carousel-active
-      className="mx-[3px] box-content h-[2px] w-[20px] flex-initial cursor-pointer border-0 border-y-[8px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-current="true"
-      aria-label="Slide 1"></button>
-    <button
-      data-te-target="#carouselDarkVariant"
-      className="mx-[3px] box-content h-[2px] w-[20px] flex-initial cursor-pointer border-0 border-y-[8px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      data-te-slide-to="1"
-      aria-label="Slide 1"></button>
-    <button
-      data-te-target="#carouselDarkVariant"
-      className="mx-[3px] box-content h-[2px] w-[20px] flex-initial cursor-pointer border-0 border-y-[8px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      data-te-slide-to="2"
-      aria-label="Slide 1"></button>
-  </div>
 
- 
-  <div
-    className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-   
-    <div
-      className="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-fade
-      data-te-carousel-item
-      data-te-carousel-active>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
-        className="block w-full"
-        alt="Motorbike Smoke" />
-      <div
-        className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
-        <h5 className="text-xl">First slide label</h5>
-        <p>
-          Some representative placeholder content for the first slide.
-        </p>
-      </div>
-    </div>
-     */}
     <div
       className="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
       data-te-carousel-fade
       data-te-carousel-item>
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp"
+        src="https://img.freepik.com/premium-photo/laptop-keyboard-shopping-trolley-auction-hammer-table-online-auction-concept_253401-2893.jpg"
         className="block w-full"
+        width="100%" height="auto"
         alt="Mountaintop" />
-      <div
-        className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
-        <h5 className="text-xl">Second slide label</h5>
-        <p>
-          Some representative placeholder content for the second slide.
-        </p>
-      </div>
     </div>
     
     <div
@@ -170,16 +109,10 @@ export default function Home() {
       data-te-carousel-fade
       data-te-carousel-item>
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp"
+        src="https://media.istockphoto.com/id/1471527204/photo/cyberspace-laws.jpg?b=1&s=170667a&w=0&k=20&c=34lqOLN07LBS93IqVgC8BAOsGTeEFBHJwoqHirkUb7Q="
         className="block w-full"
+        width="100%" height="auto"
         alt="Woman Reading a Book" />
-      <div
-        className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
-        <h5 className="text-xl">Third slide label</h5>
-        <p>
-          Some representative placeholder content for the third slide.
-        </p>
-      </div>
     </div>
   </div>
 
@@ -236,95 +169,25 @@ export default function Home() {
 </div>
 
 <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-blue-900 leading-tight bg-red-500">Unbeatable Deals on Cutting-Edge Gadgets!</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-yellow-700 ">Get Ready for Tech Paradise! Unbeatable Prices on Gadgets Await. Bid, Save, and Transform Your Tech Experience Now!</p>
     </div>
-    <div className="flex flex-wrap -m-4">
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360"/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/601x361"/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/603x363"/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/602x362"/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/605x365"/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/606x366"/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col">
       <div className="h-1 bg-gray-200 rounded overflow-hidden">
         {/* <div className="w-24 h-full bg-indigo-500"></div> */}
       </div>
       <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-        <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Space The Final Frontier</h1>
-        <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+        <h1 className="sm:w-2/5  font-medium title-font text-2xl mb-2 sm:mb-0 text-blue-900 leading-tigh">Shop By Category</h1>
       </div>
     </div>
-    <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 px-6">
       <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
         <div className="rounded-lg h-64 overflow-hidden">
-          <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503"/>
+          <img alt="content" className="object-cover object-center h-full w-full" src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         </div>
-        <h2 className="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
-        <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a className="text-indigo-500 inline-flex items-center mt-3">Learn More
+        <h2 className="text-xl font-medium title-font text-blue-900 mt-5">Mobile</h2>
+        <a className="text-indigo-500 inline-flex items-center mt-3"  href="/auction_calender">Explore
           <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
@@ -332,11 +195,10 @@ export default function Home() {
       </div>
       <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
         <div className="rounded-lg h-64 overflow-hidden">
-          <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504"/>
+          <img alt="content" className="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"/>
         </div>
-        <h2 className="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
-        <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a className="text-indigo-500 inline-flex items-center mt-3">Learn More
+        <h2 className="text-xl font-medium title-font text-blue-900 mt-5">Laptop</h2>
+        <a className="text-indigo-500 inline-flex items-center mt-3"  href="/auction_calender">Explore
           <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
@@ -344,26 +206,42 @@ export default function Home() {
       </div>
       <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
         <div className="rounded-lg h-64 overflow-hidden">
-          <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505"/>
+          <img alt="content" className="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c21hcnQlMjB3YXRjaHxlbnwwfHwwfHw%3D&w=1000&q=80"/>
         </div>
-        <h2 className="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
-        <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a className="text-indigo-500 inline-flex items-center mt-3">Learn More
+        <h2 className="text-xl font-medium title-font text-blue-900 mt-5">Smart Watch</h2>
+        <a className="text-indigo-500 inline-flex items-center mt-3" href="/auction_calender">Explore
           <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </a>
+      </div>
+    </div>
+  
+</section>
+<div className="container my-24 px-6 mx-auto">
+
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+  <Link href={'/create_auction'}>
+    <img class="h-full w-full object-cover object-center rounded" alt="hero" src="https://www.numonday.com/wp-content/uploads/2021/01/Sell-With-Us-Main.jpg"/>
+    </Link>
+    <div class="text-center lg:w-2/3 w-full">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-blue-900 leading-tight py-4">Got Something to Sell?</h1>
+      <p class="mb-8 leading-relaxed text-yellow-600">Experience the Ultimate Selling Opportunity with Us! Reach a Vast Buyer Audience, Zero Seller Commission, Free Listings in Collectives, and a Personal Account Manager for Your Ease. BiDefi: Your Perfect Selling Destination!</p>
+      <div class="flex justify-center">
+        <Link href={'/create_auction'}>
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Start Selling</button>
+        </Link>
       </div>
     </div>
   </div>
 </section>
-<div className="container my-24 px-6 mx-auto">
 
   <section className="mb-32 text-gray-800 text-center">
 
     <h2 className="text-3xl font-bold mb-12">Testimonials</h2>
 
-    <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-12">
+    <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-12 bg-red-800">
       <div className="mb-12 md:mb-0">
         <div className="flex justify-center mb-6">
           <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" className="rounded-full shadow-lg w-32" />
